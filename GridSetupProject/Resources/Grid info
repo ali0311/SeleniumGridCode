@@ -1,0 +1,18 @@
+For Hub Start:
+Current directory + java -jar selenium-server-standalone-3.141.59.jar -role hub
+Current directory: 
+For Node Start:
+Current directory + java -Dwebdriver.chrome.driver="C:\Users\M1032759\Desktop\Grid\chromedriver.exe" -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.0.179:4444/grid/register (hub address)
+
+Create node1
+Simple:
+java -Dwebdriver.chrome.driver="C:\Users\M1032759\Desktop\Grid\chromedriver.exe" -Dwebdriver.gecko.driver="C:\Users\M1032759\Desktop\Grid\geckodriver.exe" - Dwebdriver.ie.driver="C:\Users\M1032759\Desktop\Grid\IEDriverServer.exe -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.0.179:4444/grid/register
+Using maxInstances and maxSession
+java -Dwebdriver.chrome.driver="C:\Users\M1032759\Desktop\Grid\chromedriver.exe" -Dwebdriver.gecko.driver="C:\Users\M1032759\Desktop\Grid\geckodriver.exe" -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.0.179:4444/grid/register -port 5566 -browser browserName=firefox,maxInstances=2 -browser browserName=chrome,maxInstances=2 -maxSession 2
+Create node2
+java  -jar selenium-server-standalone-3.141.59.jar -role node -hub http://192.168.0.179:4444/grid/register
+
+
+
+
+

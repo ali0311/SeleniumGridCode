@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Sample parallel run" verbose="2" parallel="tests" thread-count="6" >
+  <test  name="Selenium grid Test" >
+    <classes>
+      <class name="com.grid.setuptest.ParallelRunTest"/>
+    </classes>
+  </test> <!-- Selenium grid Test -->
+</suite> <!-- Sample parallel run -->

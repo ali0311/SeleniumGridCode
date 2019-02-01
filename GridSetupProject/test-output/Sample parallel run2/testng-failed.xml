@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="15" guice-stage="DEVELOPMENT" name="Failed suite [Sample parallel run2]" parallel="tests">
+  <test thread-count="15" name="Selenium grid Test2(failed)" parallel="tests">
+    <classes>
+      <class name="com.grid.setuptest.ParallelRunTest">
+        <methods>
+          <include name="gmailLogin" invocation-numbers="0 1"/>
+        </methods>
+      </class> <!-- com.grid.setuptest.ParallelRunTest -->
+      <class name="com.grid.setuptest.Calc">
+        <methods>
+          <include name="calcTest" invocation-numbers="0 2 1"/>
+        </methods>
+      </class> <!-- com.grid.setuptest.Calc -->
+    </classes>
+  </test> <!-- Selenium grid Test2(failed) -->
+</suite> <!-- Failed suite [Sample parallel run2] -->
